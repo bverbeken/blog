@@ -1,0 +1,156 @@
+:root {
+	--measure: 42rem;
+	--bg: #fbfaf7;
+	--text: #1f1f1d;
+	--muted: #6b6a66;
+	--accent: #9a4a12;
+	--rule: #e4e1da;
+	--code-bg: #f1eee7;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #18181a;
+		--text: #e6e4df;
+		--muted: #9a9892;
+		--accent: #e39a5f;
+		--rule: #2e2e31;
+		--code-bg: #222225;
+	}
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--text);
+	font-family: var(--font-atkinson), system-ui, sans-serif;
+	font-size: 1.125rem;
+	line-height: 1.7;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+main {
+	max-width: var(--measure);
+	margin: 0 auto;
+	padding: 0 1em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	line-height: 1.25;
+	margin: 2em 0 0.5em;
+}
+h1 {
+	font-size: 2.1rem;
+	margin-top: 0;
+}
+h2 {
+	font-size: 1.5rem;
+}
+h3 {
+	font-size: 1.2rem;
+}
+
+p,
+ul,
+ol,
+blockquote,
+pre,
+table,
+figure {
+	margin: 0 0 1.25em;
+}
+
+a {
+	color: var(--accent);
+	text-underline-offset: 0.15em;
+	text-decoration-thickness: 1px;
+}
+a:hover {
+	text-decoration-thickness: 2px;
+}
+
+strong {
+	font-weight: 700;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 6px;
+}
+
+blockquote {
+	margin-left: 0;
+	padding-left: 1em;
+	border-left: 3px solid var(--rule);
+	color: var(--muted);
+}
+
+hr {
+	border: none;
+	border-top: 1px solid var(--rule);
+	margin: 2.5em 0;
+}
+
+code {
+	font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+	font-size: 0.875em;
+	padding: 0.1em 0.3em;
+	background: var(--code-bg);
+	border-radius: 4px;
+}
+
+pre {
+	padding: 1em 1.25em;
+	border-radius: 6px;
+	overflow-x: auto;
+	line-height: 1.5;
+}
+pre > code {
+	padding: 0;
+	background: none;
+	font-size: 0.85em;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.95em;
+}
+th,
+td {
+	padding: 0.4em 0.6em;
+	border-bottom: 1px solid var(--rule);
+	text-align: left;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
+
+/* Code blocks: Shiki renders both themes, switch with the colour scheme */
+pre.astro-code {
+	border: 1px solid var(--rule);
+}
+@media (prefers-color-scheme: dark) {
+	.astro-code,
+	.astro-code span {
+		color: var(--shiki-dark) !important;
+		background-color: var(--shiki-dark-bg) !important;
+	}
+}
