@@ -25,8 +25,9 @@ const posts = await getPosts();
 				align-items: baseline;
 				padding: 0.4em 0;
 			}
-			li time {
-				flex: 0 0 7em;
+			/* time is rendered by FormattedDate, so it needs :global to escape scoping */
+			li > :global(time) {
+				flex: 0 0 11ch;
 				color: var(--muted);
 				font-variant-numeric: tabular-nums;
 			}
@@ -42,7 +43,7 @@ const posts = await getPosts();
 					flex-direction: column;
 					gap: 0;
 				}
-				li time {
+				li > :global(time) {
 					flex: none;
 					font-size: 0.85em;
 				}
