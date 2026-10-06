@@ -10,34 +10,38 @@ Actually, the first version of the first line of this first post was: "It's been
 
 But then I thought: I can ask Claude when exactly this was. So I did:
 
-> Can you look up when I last _actually_ wrote code in any of the seats.io projects
+```text
+> Can you look up when I last actually wrote code in any of the seats.io projects
+```
 
 It came back with this:
 
-> Listed 1 directory, ran 1 shell command
->
-> Session logs only cover 30 days, which isn't far enough back, so I'll use git history instead to see how your commit messages evolved over time.
->
-> Ran 3 shell commands
->
-> I'm checking a few commits in your own style ("refactoring", "clearer commment") from September. They might be code you wrote yourself.
->
-> Ran 2 shell commands
->
-> Yes. Here's what your seats.io git history shows. It's a heuristic based on the style of your commit messages across about 55 local seats.io repos, not hard proof.
->
-> **The timeline**
-> - Mid-January 2026: you first started Claude Code, on 15 January. Your first real use was 28 January.
-> - February 2026: commits with a Claude co-author line appear, 34% of your commits that month, rising to 65% in March. You stopped writing commit messages almost immediately.
-> - Since June 2026: almost every commit has a Claude-style message ("Give database queries …"). Your own style ("refactoring", "fixed date", "typos") has nearly disappeared.
->
-> **The last code you touched yourself**
->
-> Your most recent commits in your own style are from 21 September 2026:
-> - refactoring - rename (3 times, 6 to 22 lines each)
-> - and a few days earlier: refactoring - remove comments (31 lines deleted), refactoring (constants renamed and inlined), and clearer commment (with a typo, so definitely you)
->
-> So you haven't stopped touching code. What you do now is clean up after Claude: rename things, delete comments, tidy up. The last time you clearly wrote code yourself, as in new functionality in your own commits, was before February 2026, so about eight months ago.
+```text
+Listed 1 directory, ran 1 shell command
+
+Session logs only cover 30 days, which isn't far enough back, so I'll use git history instead to see how your commit messages evolved over time.
+
+Ran 3 shell commands
+
+I'm checking a few commits in your own style ("refactoring", "clearer commment") from September. They might be code you wrote yourself.
+
+Ran 2 shell commands
+
+Yes. Here's what your seats.io git history shows. It's a heuristic based on the style of your commit messages across about 55 local seats.io repos, not hard proof.
+
+The timeline
+- Mid-January 2026: you first started Claude Code, on 15 January. Your first real use was 28 January.
+- February 2026: commits with a Claude co-author line appear, 34% of your commits that month, rising to 65% in March. You stopped writing commit messages almost immediately.
+- Since June 2026: almost every commit has a Claude-style message ("Give database queries …"). Your own style ("refactoring", "fixed date", "typos") has nearly disappeared.
+
+The last code you touched yourself
+
+Your most recent commits in your own style are from 21 September 2026:
+- refactoring - rename (3 times, 6 to 22 lines each)
+- and a few days earlier: refactoring - remove comments (31 lines deleted), refactoring (constants renamed and inlined), and clearer commment (with a typo, so definitely you)
+
+So you haven't stopped touching code. What you do now is clean up after Claude: rename things, delete comments, tidy up. The last time you clearly wrote code yourself, as in new functionality in your own commits, was before February 2026, so about eight months ago.
+```
 
 In summary, it:  
 - checked its own logs first, then decided those didn't go back far enough

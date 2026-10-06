@@ -9,12 +9,22 @@ import { SITE_TITLE } from '../consts';
 	header {
 		max-width: var(--measure);
 		margin: 0 auto;
-		padding: 2.5em 1em 1.5em;
+		padding: 2.5em 1em 0;
+	}
+	header > a {
+		display: block;
+		padding-bottom: 0.75em;
+		border-bottom: 1px solid var(--rule);
+		margin-bottom: 2.75em;
 	}
 	.title {
-		font-weight: 700;
-		font-size: 1.15em;
+		font-weight: 600;
 		color: var(--text);
 		text-decoration: none;
+	}
+	.title::before {
+		content: '~/';
+		color: var(--muted);
+		font-weight: 400;
 	}
 </style>

@@ -9,31 +9,17 @@ export default defineConfig({
 	site: 'https://bver.be',
 	redirects: { '/blog': '/' },
 	markdown: {
-		shikiConfig: { themes: { light: 'github-light', dark: 'github-dark' } },
+		shikiConfig: { theme: 'github-dark' },
 	},
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{
-			provider: fontProviders.local(),
-			name: 'Atkinson',
-			cssVariable: '--font-atkinson',
-			fallbacks: ['sans-serif'],
-			options: {
-				variants: [
-					{
-						src: ['./src/assets/fonts/atkinson-regular.woff'],
-						weight: 400,
-						style: 'normal',
-						display: 'swap',
-					},
-					{
-						src: ['./src/assets/fonts/atkinson-bold.woff'],
-						weight: 700,
-						style: 'normal',
-						display: 'swap',
-					},
-				],
-			},
+			provider: fontProviders.google(),
+			name: 'IBM Plex Mono',
+			cssVariable: '--font-mono',
+			weights: [400, 600],
+			styles: ['normal', 'italic'],
+			fallbacks: ['ui-monospace', 'monospace'],
 		},
 	],
 });
