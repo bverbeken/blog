@@ -1,0 +1,41 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { AUTHOR } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="About" description={`About ${AUTHOR}, and why this blog exists.`} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<article>
+				<h1>About</h1>
+				<p>
+					I'm Ben Verbeken. I write software, and lately I mostly direct agents that write it
+					for me.
+				</p>
+				<p>
+					In 2014 I co-founded <a href="https://seats.io">seats.io</a>, a seating chart and reserved
+					seating platform for ticketing companies. I still spend most of my time there: designing,
+					reviewing, and cleaning up after Claude.
+				</p>
+				<p>
+					This blog is where I document how my work is changing while it happens. Experiments,
+					workflows, what works and what doesn't. Mostly for myself, partly for other developers
+					going through the same thing, and a little bit for future agents.
+				</p>
+				<p>
+					I live in Belgium with my family. Away from the keyboard I sing in <a
+						href="https://captainsugar.be/">Captain Sugar</a
+					> and go <a href="https://www.strava.com/athletes/63708615">running</a>.
+				</p>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -1,9 +1,29 @@
 ---
 import { SITE_TITLE } from '../consts';
+
+const links = [
+	{ href: '/', label: 'Posts' },
+	{ href: '/about/', label: 'About' },
+	{ href: '/rss.xml', label: 'RSS' },
+];
+const path = Astro.url.pathname;
+const isCurrent = (href: string) =>
+	href === '/' ? path === '/' || path.startsWith('/blog/') : path.startsWith(href);
 ---
 
 <header>
-	<a class="title" href="/">{SITE_TITLE}</a>
+	<div class="bar">
+		<a class="title" href="/">{SITE_TITLE}</a>
+		<nav>
+			{
+				links.map(({ href, label }) => (
+					<a href={href} aria-current={isCurrent(href) ? 'page' : undefined}>
+						{label}
+					</a>
+				))
+			}
+		</nav>
+	</div>
 </header>
 <style>
 	header {
@@ -11,8 +31,12 @@ import { SITE_TITLE } from '../consts';
 		margin: 0 auto;
 		padding: 2.5em 1em 0;
 	}
-	header > a {
-		display: block;
+	.bar {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 0.5em 1.5em;
 		padding-bottom: 0.75em;
 		border-bottom: 1px solid var(--rule);
 		margin-bottom: 2.75em;
@@ -26,5 +50,28 @@ import { SITE_TITLE } from '../consts';
 		content: '~/';
 		color: var(--muted);
 		font-weight: 400;
+	}
+	nav {
+		display: flex;
+		gap: 1.5em;
+	}
+	nav a {
+		color: color-mix(in srgb, var(--text) 75%, var(--bg));
+		text-decoration: none;
+	}
+	nav a::before,
+	nav a::after {
+		color: var(--muted);
+		opacity: 0.6;
+	}
+	nav a::before {
+		content: '[';
+	}
+	nav a::after {
+		content: ']';
+	}
+	nav a:hover,
+	nav a[aria-current='page'] {
+		color: var(--accent);
 	}
 </style>
