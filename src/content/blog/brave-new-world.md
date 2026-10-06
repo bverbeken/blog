@@ -1,7 +1,7 @@
 ---
 title: 'Brave New World'
 description: "The last code I wrote myself was a rename. Notes from a brave new world, for myself, and for future agents."
-pubDate: 2026-10-06
+pubDate: 2026-10-04
 ---
 
 The last code I wrote myself was a rename. Via IntelliJ's refactor menu. To clean up after Claude.
