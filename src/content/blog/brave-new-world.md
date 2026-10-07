@@ -10,7 +10,7 @@ Actually, the first version of the first line of this first post was: "It's been
 
 But then I thought: I can ask Claude when exactly this was. So I did:
 
-```text title="~/bver/work/blog"
+```text title="~/bver/work/seats.io"
 > Can you look up when I last actually wrote code in any of the seats.io projects
 
 Listed 1 directory, ran 1 shell command
