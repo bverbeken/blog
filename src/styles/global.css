@@ -196,12 +196,15 @@ pre[data-language='text']::after {
 }
 /* title bar */
 pre[data-language='text']::before {
-	content: '';
+	content: '~/bver';
 	inset-inline: 0;
 	padding-inline: 1.1em;
 	border-bottom: 1px solid var(--rule);
 	border-radius: 6px 6px 0 0;
 	background: var(--term-bar);
+}
+pre[data-language='text'][data-title]::before {
+	content: attr(data-title);
 }
 /* minimise, maximise, close on the right */
 pre[data-language='text']::after {

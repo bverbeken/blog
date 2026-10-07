@@ -9,7 +9,19 @@ export default defineConfig({
 	site: 'https://bver.be',
 	redirects: { '/blog': '/' },
 	markdown: {
-		shikiConfig: { theme: 'github-dark' },
+		shikiConfig: {
+			theme: 'github-dark',
+			transformers: [
+				{
+					// ```text title="~/seatsio" puts the title in the window's title bar
+					name: 'code-title',
+					pre(node) {
+						const title = this.options.meta?.__raw?.match(/title="([^"]*)"/)?.[1];
+						if (title) node.properties['data-title'] = title;
+					},
+				},
+			],
+		},
 	},
 	integrations: [mdx(), sitemap()],
 	fonts: [

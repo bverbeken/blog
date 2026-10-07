@@ -10,13 +10,9 @@ Actually, the first version of the first line of this first post was: "It's been
 
 But then I thought: I can ask Claude when exactly this was. So I did:
 
-```text
+```text title="~/bver/work/blog"
 > Can you look up when I last actually wrote code in any of the seats.io projects
-```
 
-It came back with this:
-
-```text
 Listed 1 directory, ran 1 shell command
 
 Session logs only cover 30 days, which isn't far enough back, so I'll use git history instead to see how your commit messages evolved over time.
