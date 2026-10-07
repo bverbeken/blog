@@ -1,31 +1,68 @@
 ---
 title: 'Devoxx Day 1 recap'
-description: "Spec-driven development, or the Rational Unified Process for AI. We've gone full circle."
+description: "GitHub Copilot, Java on LEGO robots, and spec-driven development. Plot twist: waterfall is back."
 pubDate: 2026-10-05
 writtenBy: assisted
-draft: true
 ---
 
-First day of Devoxx. I didn't take notes in the morning or during the lunch talk. I only started taking notes with Claude later that afternoon. How I took notes the rest of the week is something I'll blog about later.
+First day of Devoxx. Three hours of GitHub Copilot in the morning, a lunch talk about Java on LEGO robots, and then another three hours, this time on spec-driven development.
+
+That last one left me with a question. Is spec-driven development anything more than waterfall, now that there's AI?
+
+## From Autocomplete to Autopilot
+
+The morning was three hours of GitHub Copilot with Tugdual Grall, mostly live demos. Moderately salesy: it was a Copilot product tour, but it was practical and honest. A good way to start the week.
+
+His son pays $200 a month for a subscription and burns through an estimated $8,000 to $10,000 worth of tokens. I pay for one too, and I've never hit my limit. Must be doing something wrong, and that'll probably be food for a future post. Then again, he also mentioned RTK, the token-saving tool I use. So I *must* be doing *something* right.
+
+**Verdict**: 3/5.
+
+**What I took away**: a skill called `/grill-me`. You'll hear about it again on Day 2.
 
 ## Java, LEGO & AI
 
-The lunch talk was Eddy Vos from Devoxx4Kids. They wanted kids to program LEGO SPIKE robots in Java, and SPIKE doesn't support Java. So they tried different ways to get Java code running on the robot, and demoed them. I didn't learn much, but it was an entertaining talk. 
+Over lunch, Eddy Vos took the stage. Alongside his day job as engineering manager at NN Group, he volunteers as chair of Devoxx4Kids Netherlands, a non-profit that teaches coding and robotics to kids aged 8 to 14. Their plan? Get those kids programming LEGO SPIKE robots in Java.
+
+One small problem. SPIKE doesn't do Java.
+
+So they tried a bunch of ways to get Java running on the robot anyway, and demoed them. And yes, they found one.
+
+**Verdict**: 4/5. Entertaining, and it's nice to have a few talks without AI in them too. Also, I have a soft spot for people who give back.
+
+**What I took away**: for a lunch talk, that's enough. I'm there for the show, and to support people doing good.
 
 ## From Developer to Builder
 
-The afternoon was a three-hour deep dive on spec-driven development by Simon Martinelli. His version is the "AI Unified Process": a nod to the Rational Unified Process, taking just the useful parts, for AI specifically. You write a vision, the AI derives requirements, use cases and an entity model, a human revises them, and the agent generates the code and tests from that.
+The afternoon belonged to Simon Martinelli, who took a deep dive into spec-driven development (or his own version of it?). He calls it the "AI Unified Process", after the Rational Unified Process, keeping only the useful parts and aiming them at AI.
 
-It's the Rational Unified Process for AI, rebranded as spec-driven development. The idea is literally to write UML (use case diagrams, entity diagrams…) and give it to your LLM. We've gone full circle 😭
+You start with a vision. From that, the AI derives requirements, use cases and an entity model. A human revises those, and then the agent generates the code and tests.
 
-It's the first talk I've seen that says: back to waterfall, because now we have AI. Old ideas, promoted as if they're new. I left at the break.
+**Verdict**: 2/5. As a talk, it was fine. The angle and the content, I don't agree with.
 
-To be fair, he does argue that English (or "specs") is the next level of abstraction. Which would mean we're at the start of the golden age of UML, which will finally shine as it was meant to. And I'm not even sure he's wrong. The floor is moving under my feet here. Luckily we have AI to generate the UML. Turtles all the way down… sorry, [Mermaids](https://mermaid.ai) all the way down 🧜
+Write UML (use case diagrams, entity diagrams…) and feed it to your LLM. That's *literally* the idea. Full circle 😭
 
-But I think he had a *flavor* of spec-driven development that I don't like. Waterfall was wrong for many reasons, and developer productivity (the time it takes to write code) was just one of them. The AI Unified Process doesn't answer the most important one: the client doesn't know what they need. If you spec everything up front, you assume you know what the requirements are. And you don't.
+Plot twist. Waterfall is back, this time with AI. He never used the word (who would?). But I was there, and what he described was waterfall.
 
-What still works for me: small steps, small PRs, iterative improvement. That's still (and always will be) important. I'm not sure there are other flavors of spec-driven development. If there aren't, then SDD is not for me.
+The second half I [watched](https://www.youtube.com/watch?v=z8lal-Yt_04) on YouTube later, because I had to leave early.
+
+To be fair, he does argue that English (or "specs") is the next level of abstraction. Which would make this the golden age of UML, finally shining the way it was always meant to. And luckily, AI can generate the UML for you. Turtles all the way down… sorry, [Mermaids](https://mermaid.ai) all the way down 🧜
+
+**What I took away**: what he showed is a *flavor* of spec-driven development I don't like. Waterfall was wrong for many reasons, and I don't remember developer productivity being one of them. The real problem was that the client didn't know what they needed. They still don't, and the AI Unified Process has no answer to that, imho.
+
+So what still works for me? Small steps, small PRs, iterative improvement. That's still important, and I think it always will be.
+
+## Between the talks
+
+Talk to people in the hallways and you see how wide the AI spectrum still is (and for the record, I'm not at the extreme end of it). Someone told me "I think it's about time we (at work) start to look at this AI thing". At the JetBrains booth, I talked to the people who make Kotlin and IntelliJ. Two things many people have declared dead since LLMs showed up.
+
+They're not so sure. And not bothered at all.
+
+I didn't take notes in the morning or during the lunch talk. Only later that afternoon did I start taking notes with Claude. How that went for the rest of the week is a blog post for later.
 
 ## Day 1
 
-A bit disappointed. Some ideas popped up that would get clearer on day 2 (and let's see the rest of the week), but nothing revolutionary.
+I'm a bit disappointed so far. But it's only been the first day. Let's see what the rest of the week brings.
+
+So, is spec-driven development more than waterfall with AI? Honestly, I'm not sure other flavors of it even exist. If this is what SDD is about, I'm out. Then again, if it's just one flavor, I'll have to taste a few more.
+
+My next step on SDD, for now? Nothing. I'll keep working feature by feature, and automate more of it.
