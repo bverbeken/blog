@@ -194,9 +194,9 @@ pre[data-language='text']::after {
 	font-size: 0.85em;
 	color: var(--muted);
 }
-/* title bar with a generic window label */
+/* title bar */
 pre[data-language='text']::before {
-	content: 'terminal';
+	content: '';
 	inset-inline: 0;
 	padding-inline: 1.1em;
 	border-bottom: 1px solid var(--rule);
