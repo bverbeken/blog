@@ -2,6 +2,7 @@
 title: 'Devoxx Day 2 recap'
 description: "Loop engineering, dimming the lights in the software factory, and a novel built like a production system."
 pubDate: 2026-10-06
+draft: true
 ---
 
 > **Note:** this is version 1 of this post. Claude wrote it, based on an interview with me. The ideas are mine, the text isn't, and you can tell. Getting an agent to write like me is a future experiment. When it works, I plan to replace this one with a better version, and keep this one online as the "before" picture.
