@@ -16,6 +16,8 @@ const blog = defineCollection({
 			heroImage: z.optional(image()),
 			// Drafts are visible in `npm run dev`, never in the built site
 			draft: z.boolean().default(false),
+			// Who wrote the text: me, me with AI, or AI (shown as ✍️, 🤖+✍️, 🤖)
+			writtenBy: z.enum(['human', 'assisted', 'ai']),
 		}),
 });
 

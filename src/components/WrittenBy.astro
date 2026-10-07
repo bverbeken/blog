@@ -1,0 +1,27 @@
+---
+interface Props {
+	by: 'human' | 'assisted' | 'ai';
+	label?: boolean;
+}
+
+const KINDS = {
+	human: { icon: '✍️', text: 'human-written' },
+	assisted: { icon: '🤖+✍️', text: 'AI-assisted' },
+	ai: { icon: '🤖', text: 'AI-written' },
+};
+
+const { by, label = false } = Astro.props;
+const { icon, text } = KINDS[by];
+---
+
+<span class="written-by" title={text} aria-label={text}>
+	<span aria-hidden="true">{icon}</span>{label && <span class="text"> {text}</span>}
+</span>
+<style>
+	.written-by {
+		white-space: nowrap;
+	}
+	.text {
+		color: var(--muted);
+	}
+</style>

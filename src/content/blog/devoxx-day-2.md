@@ -2,6 +2,7 @@
 title: 'Devoxx Day 2 recap'
 description: "Loop engineering, dimming the lights in the software factory, and a novel built like a production system."
 pubDate: 2026-10-06
+writtenBy: ai
 draft: true
 ---
 
