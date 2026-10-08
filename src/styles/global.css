@@ -30,6 +30,11 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
+::selection {
+	background: var(--accent);
+	color: var(--bg);
+}
+
 main {
 	max-width: var(--measure);
 	margin: 0 auto;
