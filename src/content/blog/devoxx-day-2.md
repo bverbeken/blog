@@ -5,6 +5,8 @@ pubDate: 2026-10-06
 writtenBy: assisted
 ---
 
+*Note: I wrote this post as an experiment: Claude interviewed me, and maker and checker agents polished the text in a loop. For what I actually took home from the week, read [What I took home from Devoxx 2026](/blog/what-i-took-home-from-devoxx-2026/).*
+
 Day 2 at Devoxx. Two three-hour blocks on my schedule, and I was looking forward to both. My favourite? Again the forty-minute one in between.
 
 ## Loop Engineering

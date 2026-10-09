@@ -5,6 +5,8 @@ pubDate: 2026-10-05
 writtenBy: assisted
 ---
 
+*Note: I wrote this post as an experiment: Claude interviewed me, and maker and checker agents polished the text in a loop. For what I actually took home from the week, read [What I took home from Devoxx 2026](/blog/what-i-took-home-from-devoxx-2026/).*
+
 First day of Devoxx. Three hours of GitHub Copilot in the morning, a lunch talk about Java on LEGO robots, and then another three hours, this time on spec-driven development.
 
 That last one left me with a question. Is spec-driven development anything more than waterfall, now that there's AI?
