@@ -2,7 +2,7 @@
 title: 'Devoxx Day 1 recap'
 description: "GitHub Copilot, Java on LEGO robots, and spec-driven development. Plot twist: waterfall is back."
 pubDate: 2026-10-05
-writtenBy: assisted
+writtenBy: ai
 ---
 
 *Note: I wrote this post as an experiment: Claude interviewed me, and maker and checker agents polished the text in a loop. For what I actually took home from the week, read [What I took home from Devoxx 2026](/blog/what-i-took-home-from-devoxx-2026/).*

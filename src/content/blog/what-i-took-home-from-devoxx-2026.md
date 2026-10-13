@@ -2,7 +2,7 @@
 title: 'What I took home from Devoxx 2026'
 description: "One question followed me around Devoxx all week: what are others doing with all those tokens that I'm not? The answer, two camps, some small tricks and the best talks that had nothing to do with AI."
 pubDate: 2026-10-09
-writtenBy: assisted
+writtenBy: ai
 ---
 
 All week, one question kept following me around Devoxx. On [Day 1](/blog/devoxx-day-1/), Tugdual Grall told us his son pays $200 a month for an AI subscription and burns through $8,000 to $10,000 worth of tokens. I've almost never hit the token limit. On [Day 2](/blog/devoxx-day-2/), talk after talk mentioned token economics and optimization, the importance of caching and context clearing, etc., and I felt like I was missing something. Then on Day 3, Nicolas Martignole (Devoxx France, Back Market) talked about a bill of $86,000 in [0 to 350 Engineers on Claude Code](https://www.youtube.com/watch?v=HzbNrEDZkYU).
