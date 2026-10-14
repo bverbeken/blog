@@ -19,15 +19,15 @@ And I do think I can do better: it's obvious others are doing better at writing 
 
 So if that's the case, the question becomes: what am *I* doing wrong? Why does the latest-and-greatest Claude model not give me better text out of the box? This must mean the delta is in what I'm _doing_, not in what I'm _using_. 
 
-Which makes me think about two quotes Renato referred to in his [excellent talk](https://www.youtube.com/watch?v=SQUrHzMie3o) last week at Devoxx:
-> On average, an LLM produces average code.
+This reminds me of what Renato Cavalcanti said in his [excellent talk](https://www.youtube.com/watch?v=SQUrHzMie3o) last week at Devoxx: 
+> On average, you get average code if you don't guide [the LLM].
 
-and
-> Steer: pull the model away from the average.
+And later, he quoted Charafeddine Mouzouni, from the book [_How to Think With AI_](https://charafeddine.co/how-to-think-with-ai):
+> Your knowledge is what pulls the model away from the center
 
 Allow me to paraphrase: on one side, you have the model. The more money you throw at AI, the better the model, and that's true. This makes it look like a pay-to-win game. 
 
-However, there's also how you *use* the model. Which instructions do you give it? How do you make sure the output is what you expect? That requires skill, and I like to believe that's what will distinguish the best from the rest, whether we're talking about software developers or writers. Because if that's not the case, and turns out to be a pay-to-win game, then we may just as well all pack our bags and go do something else, like singing or wood working. 
+However, there's also how you *use* the model. Which instructions do you give it? How do you make sure the output is what you expect? That requires skill and effort, and I like to believe that's what will distinguish the best from the rest, whether we're talking about software developers or writers. Because if that's not the case, and turns out to be a pay-to-win game, then we may just as well all pack our bags and go do something else, like singing or wood working. 
 
 So where does this leave us? I'm planning on writing more posts *with AI*, either *assisted by* an LLM, or actually *written by* an LLM. 
 
