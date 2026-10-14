@@ -18,6 +18,8 @@ const blog = defineCollection({
 			draft: z.boolean().default(false),
 			// Who wrote the text: me, me with AI, or AI (shown as ✍️, 🤖+✍️, 🤖)
 			writtenBy: z.enum(['human', 'assisted', 'ai']),
+			// A few words on how the post was made, shown in the label line
+			writtenHow: z.string().optional(),
 		}),
 });
 

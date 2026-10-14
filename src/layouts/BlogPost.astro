@@ -9,7 +9,7 @@ import WrittenBy from '../components/WrittenBy.astro';
 
 type Props = CollectionEntry<'blog'>['data'] & { readingMinutes: number };
 
-const { title, description, pubDate, updatedDate, heroImage, writtenBy, readingMinutes } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, writtenBy, writtenHow, readingMinutes } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,8 +18,13 @@ const { title, description, pubDate, updatedDate, heroImage, writtenBy, readingM
 		<BaseHead title={title} description={description} image={heroImage} article />
 		<style>
 			.meta {
+				margin: 0 0 0.5em;
+				color: var(--muted);
+			}
+			.label {
 				margin: 0 0 2.5em;
 				color: var(--muted);
+				font-style: italic;
 			}
 			h1 {
 				margin-bottom: 0.25em;
@@ -36,7 +41,7 @@ const { title, description, pubDate, updatedDate, heroImage, writtenBy, readingM
 			<article>
 				<h1>{title}</h1>
 				<p class="meta">
-					<FormattedDate date={pubDate} /> · <WrittenBy by={writtenBy} label /> · {readingMinutes} min read
+					<FormattedDate date={pubDate} /> · {readingMinutes} min read
 					{
 						updatedDate && (
 							<>
@@ -44,6 +49,10 @@ const { title, description, pubDate, updatedDate, heroImage, writtenBy, readingM
 							</>
 						)
 					}
+				</p>
+				<p class="label">
+					<WrittenBy by={writtenBy} label />{writtenHow ? `: ${writtenHow}` : '.'}
+					{Astro.url.pathname !== '/blog/writing-with-ai/' && <> <a href="/blog/writing-with-ai/">What this means</a></>}
 				</p>
 				{heroImage && <Image class="hero" width={1280} src={heroImage} alt="" />}
 				<slot />
