@@ -50,3 +50,11 @@ const fullTitle = title === SITE_TITLE ? title : `${title} · ${SITE_TITLE}`;
 <meta property="og:description" content={description} />
 {image && <meta property="og:image" content={new URL(image.src, Astro.url)} />}
 <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+
+<!-- Umami page view counts; data-domains skips localhost -->
+<script
+	is:inline
+	defer
+	src="https://cloud.umami.is/script.js"
+	data-website-id="437b25d6-c369-4651-9975-14ad39fb381c"
+	data-domains="bver.be"></script>
