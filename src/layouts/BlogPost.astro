@@ -9,7 +9,7 @@ import WrittenBy from '../components/WrittenBy.astro';
 
 type Props = CollectionEntry<'blog'>['data'] & { readingMinutes: number };
 
-const { title, description, pubDate, updatedDate, heroImage, writtenBy, writtenHow, readingMinutes } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, writtenBy, readingMinutes } = Astro.props;
 ---
 
 <!doctype html>
@@ -25,6 +25,11 @@ const { title, description, pubDate, updatedDate, heroImage, writtenBy, writtenH
 				margin: 0 0 2.5em;
 				color: var(--muted);
 				font-style: italic;
+			}
+			.info {
+				margin-left: 0.25em;
+				font-style: normal;
+				text-decoration: none;
 			}
 			h1 {
 				margin-bottom: 0.25em;
@@ -51,8 +56,8 @@ const { title, description, pubDate, updatedDate, heroImage, writtenBy, writtenH
 					}
 				</p>
 				<p class="label">
-					<WrittenBy by={writtenBy} label />{writtenHow ? `: ${writtenHow}` : '.'}
-					{Astro.url.pathname !== '/blog/writing-with-ai/' && <> <a href="/blog/writing-with-ai/">What this means</a></>}
+					<WrittenBy by={writtenBy} label />
+					{Astro.url.pathname !== '/blog/writing-with-ai/' && <a class="info" href="/blog/writing-with-ai/" title="What this means" aria-label="What this means">ⓘ</a>}
 				</p>
 				{heroImage && <Image class="hero" width={1280} src={heroImage} alt="" />}
 				<slot />

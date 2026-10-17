@@ -3,7 +3,6 @@ title: 'Devoxx Day 2 recap'
 description: "Loop engineering, dimming the lights in the software factory, and a novel built like a production system."
 pubDate: 2026-10-06
 writtenBy: ai
-writtenHow: "Claude interviewed me, and maker and checker agents polished the text in a loop."
 ---
 
 *For what I actually took home from the week, read [What I took home from Devoxx 2026](/blog/what-i-took-home-from-devoxx-2026/).*

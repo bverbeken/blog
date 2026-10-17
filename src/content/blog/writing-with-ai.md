@@ -2,6 +2,7 @@
 title: 'Writing with AI'
 description: "I wasn't happy with the Devoxx recaps I wrote with AI. Going forward, every post says how it was written: human-written, AI-assisted or AI-written."
 pubDate: 2026-10-14
+updatedDate: 2026-10-17
 writtenBy: human
 ---
 
@@ -32,9 +33,11 @@ However, there's also how you *use* the model. Which instructions do you give it
 So where does this leave us? I'm planning on writing more posts *with AI*, either *assisted by* an LLM, or actually *written by* an LLM. 
 
 Going forward, I'll be tagging my posts as such as well: 
-* ✍️ human-written:  I wrote every word, manually. AI may comment or ask questions, but changes no words.
-* 🤖+✍️ AI-assisted:  I wrote the first full draft, and an AI changed words afterwards.
-* 🤖 AI-written:  an AI wrote the first full draft, even when it came from my own interview answers.
+* ✍️ human-written: I wrote every word. AI only proofread it, for typos and the like.
+* 🤖+✍️ AI-assisted: the ideas, structure and choices are mine, and so is much of the work. AI may have written a first draft, which I then reworked.
+* 🤖 AI-written: an AI wrote the text, and I only made a few edits.
+
+*Update, Oct 17: I changed these rules after writing [I cut my finger writing this post](/blog/i-cut-my-finger-writing-this-post/). Most of the work there was mine, but the old rule called it AI-written.*
 
 Being clear about this serves three main purposes. 
 

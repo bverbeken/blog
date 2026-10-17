@@ -3,7 +3,6 @@ title: 'Taking conference notes with Claude Code'
 description: "Pen and paper, then a Supernote: I never went back to those notes. At Devoxx I typed them, and let Claude do the structuring."
 pubDate: 2026-10-08
 writtenBy: assisted
-writtenHow: "Claude interviewed me and wrote a first draft. Then agents and I edited it."
 ---
 
 I'm at Devoxx Belgium this week, and I've taken more notes than at any conference before. All of them typed on my laptop.
