@@ -71,4 +71,4 @@ Expect posts about:
 - **The craft.** What happens to developers, our tools and our learning when we no longer write the code ourselves.
 - **The business.** If anyone can build software, where's the edge? SaaS, domain knowledge, and why one software factory beats another.
 
-Everything flows, Heraclitus said. I wrote about that once before, in [Panta Rhei](/blog/panta-rhei/), the one post I kept from an earlier attempt at blogging. Back then it was about changing software without breaking it. Now it's the people who build it who are changing.
+Everything flows, Heraclitus said. I wrote about that once before, in [Panta Rhei](/blog/panta-rhei/), a post from an earlier attempt at blogging. Back then it was about changing software without breaking it. Now it's the people who build it who are changing.
