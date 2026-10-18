@@ -180,6 +180,10 @@ pre.astro-code {
 	border: 1px solid var(--rule);
 	background-color: var(--quote-bg) !important;
 }
+pre[data-language='plaintext'] {
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+}
 /* Plain text blocks (terminal output, transcripts): a terminal window that wraps instead of scrolling */
 pre[data-language='text'] {
 	position: relative;
