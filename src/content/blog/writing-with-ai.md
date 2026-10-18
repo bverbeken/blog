@@ -34,7 +34,7 @@ So where does this leave us? I'm planning on writing more posts *with AI*, eithe
 
 Going forward, I'll be tagging my posts as such as well: 
 * ✍️ human-written: I built the structure, and wrote the text. AI can be used to proofread (e.g. hunt for typos). 
-* 🤖+✍️ AI-assisted: the ideas, structure and choices are mine, and I wrote most of the text, or reworked it. AI can be used to compile a first draft (e.g. based on an interview or grilling session), and/or to rework language (typos, but also wording and phrasing).
+* ✍️+🤖 AI-assisted: the ideas, structure and choices are mine, and I wrote most of the text, or reworked it. AI can be used to compile a first draft (e.g. based on an interview or grilling session), and/or to rework language (typos, but also wording and phrasing).
 * 🤖 AI-written: an AI wrote the text from start to finish, and I only made a few edits.
 
 *(Oct 17 -- Note: I edited these rules after writing [I cut my finger writing this post](/blog/i-cut-my-finger-writing-this-post/); the old rule called any post which was initially drafted by AI as AI-written, regardless of how much I edited that text afterwards.)*
