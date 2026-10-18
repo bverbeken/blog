@@ -37,6 +37,28 @@ const { title, description, pubDate, updatedDate, heroImage, writtenBy, readingM
 			.hero {
 				margin: 0 0 2em;
 			}
+			article :global(img:not(.hero)) {
+				cursor: zoom-in;
+			}
+			.zoom {
+				max-width: 100vw;
+				max-height: 100vh;
+				padding: 0;
+				border: 0;
+				background: none;
+				outline: none;
+				cursor: zoom-out;
+			}
+			:global(dialog.zoom::backdrop) {
+				background: rgb(0 0 0 / 0.85);
+			}
+			.zoom img {
+				display: block;
+				max-width: 95vw;
+				max-height: 95vh;
+				width: auto;
+				height: auto;
+			}
 		</style>
 	</head>
 
@@ -62,7 +84,20 @@ const { title, description, pubDate, updatedDate, heroImage, writtenBy, readingM
 				{heroImage && <Image class="hero" width={1280} src={heroImage} alt="" />}
 				<slot />
 			</article>
+			<dialog class="zoom"><img alt="" /></dialog>
 		</main>
+		<script>
+			const zoom = document.querySelector<HTMLDialogElement>('dialog.zoom')!;
+			const zoomed = zoom.querySelector('img')!;
+			document.querySelectorAll<HTMLImageElement>('article img:not(.hero)').forEach((img) => {
+				img.addEventListener('click', () => {
+					zoomed.src = img.currentSrc || img.src;
+					zoomed.alt = img.alt;
+					zoom.showModal();
+				});
+			});
+			zoom.addEventListener('click', () => zoom.close());
+		</script>
 		<Footer />
 	</body>
 </html>
