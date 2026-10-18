@@ -7,7 +7,7 @@ writtenBy: assisted
 
 I click a terminal tab. I see a question for me:
 
-```
+```text
 The next arrow stays on until the last item is in view. Is that the bug, or the intended behavior?
 ```
 
