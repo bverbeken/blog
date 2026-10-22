@@ -6,6 +6,14 @@ writtenBy: assisted
 updatedDate: 2026-10-22
 ---
 
+> **Update, Thursday 22 October, 18:00**
+>
+> It's over. Ivo Steyaert and Merijn Geerts 🇧🇪 finished their 124th yard together, and then stopped together. That's a new world record: 124 yards, 124 hours, more than 830 km. They share it.
+>
+> Belgium finished third with 1,058 yards. The USA won with 1,120, Australia came second with 1,069.
+>
+> What an exciting race.
+
 > **Update, Thursday 22 October, 7:00**
 >
 > Ivo Steyaert and Merijn Geerts 🇧🇪 are the only two runners left in the race. They just finished their 113th yard.
