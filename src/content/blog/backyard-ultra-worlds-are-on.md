@@ -3,7 +3,16 @@ title: 'Backyard Ultra Worlds are on'
 description: "The Backyard Ultra team world championship is on right now. What a backyard is, why every runner counts, and why I hope Belgium wins again."
 pubDate: 2026-10-18
 writtenBy: assisted
+updatedDate: 2026-10-22
 ---
+
+> **Update, Thursday 22 October, 7:00**
+>
+> Ivo Steyaert and Merijn Geerts 🇧🇪 are the only two runners left in the race. They just finished their 113th yard.
+>
+> Two more yards each (4 in total) and Belgium jumps over Japan to third place. After that, the world record of 119 yards is in sight. And after that, nobody knows how far they'll go. To take the win, they'll need to keep running for 42 more hours.
+>
+> The sun will come up soon here in Belgium. It will be a windy and cold day.
 
 At this very moment, 55 national teams of up to 15 runners (M/F) are still running a loop - the same loop they've been running for 29 hours straight, so far - in their respective countries across the world.  
 
