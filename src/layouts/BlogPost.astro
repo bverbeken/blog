@@ -7,9 +7,13 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import WrittenBy from '../components/WrittenBy.astro';
 
-type Props = CollectionEntry<'blog'>['data'] & { readingMinutes: number };
+type Props = CollectionEntry<'blog'>['data'] & {
+	readingMinutes: number;
+	newer?: CollectionEntry<'blog'>;
+	older?: CollectionEntry<'blog'>;
+};
 
-const { title, description, pubDate, updatedDate, heroImage, writtenBy, readingMinutes } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, writtenBy, readingMinutes, newer, older } = Astro.props;
 ---
 
 <!doctype html>
@@ -49,6 +53,29 @@ const { title, description, pubDate, updatedDate, heroImage, writtenBy, readingM
 				outline: none;
 				cursor: zoom-out;
 			}
+			.more {
+				display: flex;
+				justify-content: space-between;
+				gap: 2em;
+				margin-top: 4em;
+				padding-top: 1.5em;
+				border-top: 1px solid var(--rule);
+			}
+			.more > * {
+				flex: 1 1 0;
+			}
+			.more .newer {
+				text-align: right;
+			}
+			@media (max-width: 480px) {
+				.more {
+					flex-direction: column;
+					gap: 1em;
+				}
+				.more .newer {
+					text-align: left;
+				}
+			}
 			:global(dialog.zoom::backdrop) {
 				background: rgb(0 0 0 / 0.85);
 			}
@@ -84,6 +111,24 @@ const { title, description, pubDate, updatedDate, heroImage, writtenBy, readingM
 				{heroImage && <Image class="hero" width={1280} src={heroImage} alt="" />}
 				<slot />
 			</article>
+			{
+				(older || newer) && (
+					<nav class="more">
+						{older ? (
+							<a class="older" rel="prev" href={`/blog/${older.id}/`} data-umami-event="older-post">
+								&lt;&lt; {older.data.title}
+							</a>
+						) : (
+							<div />
+						)}
+						{newer && (
+							<a class="newer" rel="next" href={`/blog/${newer.id}/`} data-umami-event="newer-post">
+								{newer.data.title} &gt;&gt;
+							</a>
+						)}
+					</nav>
+				)
+			}
 			<dialog class="zoom"><img alt="" /></dialog>
 		</main>
 		<script>
