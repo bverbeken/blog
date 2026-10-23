@@ -1,0 +1,7 @@
+$ cat {path}
+cat: {path}: No such file or directory
+
+$ ls /
+about  posts  rss.xml
+
+Did you mean: [posts](/)?

@@ -1,0 +1,9 @@
+🤖 AI-deleted
+
+This page was here. An agent removed it
+while "cleaning up unused files".
+It said all tests passed.
+
+There were no tests.
+
+[Back to the posts that survived](/)

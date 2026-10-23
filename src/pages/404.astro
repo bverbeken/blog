@@ -1,0 +1,46 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { getPosts } from '../lib/posts';
+
+const postCount = (await getPosts()).length;
+const jokeFiles = import.meta.glob<string>('../404-jokes/*.txt', { query: '?raw', import: 'default', eager: true });
+
+const windowTitle = (file: string) => `~/bver — ${file.split('/').pop()!.replace('.txt', '').replaceAll('-', ' ')}`;
+const escapeHtml = (text: string) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+const toHtml = (joke: string) =>
+	escapeHtml(joke.trimEnd())
+		.replace(/^(\$|&gt;) /gm, '<span class="prompt">$1</span> ')
+		.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+		.replaceAll('{path}', '<span data-path>/this-page</span>')
+		.replaceAll('{posts}', String(postCount));
+
+const jokes = Object.entries(jokeFiles).map(([file, joke]) => ({ title: windowTitle(file), html: toHtml(joke) }));
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="404" description="This page does not exist." />
+		<style>
+			pre :global(.prompt) {
+				color: var(--muted);
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>404</h1>
+			{jokes.map(({ title, html }, i) => <pre data-language="text" data-title={title} data-joke hidden={i > 0} set:html={html} />)}
+			<script is:inline>
+				const jokes = document.querySelectorAll('[data-joke]');
+				const pick = Math.floor(Math.random() * jokes.length);
+				jokes.forEach((joke, i) => (joke.hidden = i !== pick));
+				document.querySelectorAll('[data-path]').forEach((path) => (path.textContent = location.pathname));
+			</script>
+		</main>
+		<Footer />
+	</body>
+</html>

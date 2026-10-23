@@ -1,0 +1,12 @@
+> open {path}
+
+● Searched {posts} posts, 1 about page and 1 RSS feed.
+  This page does not exist.
+
+  You're absolutely right that it should.
+  I could write it for you. It would be labeled
+  🤖 AI-written.
+
+> no thanks
+
+● Understood. Here are the [posts that do exist](/).
