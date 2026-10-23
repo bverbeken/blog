@@ -1,4 +1,3 @@
-/* Dark only, monospace, Markdown-style heading markers */
 :root {
 	--measure: 42rem;
 	--bg: #1b1b1a;
@@ -184,7 +183,6 @@ pre[data-language='plaintext'] {
 	white-space: pre-wrap;
 	overflow-wrap: anywhere;
 }
-/* Plain text blocks (terminal output, transcripts): a terminal window that wraps instead of scrolling */
 pre[data-language='text'] {
 	position: relative;
 	padding: 2.9em 1.25em 1em;
@@ -203,7 +201,6 @@ pre[data-language='text']::after {
 	font-size: 0.85em;
 	color: var(--muted);
 }
-/* title bar */
 pre[data-language='text']::before {
 	content: '~/bver';
 	inset-inline: 0;
@@ -215,9 +212,8 @@ pre[data-language='text']::before {
 pre[data-language='text'][data-title]::before {
 	content: attr(data-title);
 }
-/* minimise, maximise, close on the right */
 pre[data-language='text']::after {
-	content: '\2014\2003\25A1\2003\2715';
+	content: '—\2003□\2003✕';
 	right: 1.1em;
 	letter-spacing: 0;
 }

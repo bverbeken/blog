@@ -1,18 +1,23 @@
 import { getCollection } from 'astro:content';
 
-// Published posts, newest first. Drafts are included in `npm run dev` only.
+const WORDS_PER_MINUTE = 230;
+const CODE_BLOCK = /```[\s\S]*?```/g;
+const IMAGE = /!\[[^\]]*\]\([^)]*\)/g;
+const LINK_KEEPING_ITS_TEXT = /\[([^\]]*)\]\([^)]*\)/g;
+const HTML_TAG = /<[^>]+>/g;
+
 export async function getPosts() {
-	const posts = await getCollection('blog', ({ data }) => import.meta.env.DEV || !data.draft);
+	const visibleInThisBuild = ({ data }: { data: { draft: boolean } }) => import.meta.env.DEV || !data.draft;
+	const posts = await getCollection('blog', visibleInThisBuild);
 	return posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 }
 
-// Estimated reading time in whole minutes, at about 230 words per minute.
 export function readingMinutes(body = '') {
 	const text = body
-		.replace(/```[\s\S]*?```/g, ' ') // code blocks
-		.replace(/!\[[^\]]*\]\([^)]*\)/g, ' ') // images
-		.replace(/\[([^\]]*)\]\([^)]*\)/g, '$1') // links: keep the text
-		.replace(/<[^>]+>/g, ' '); // html tags
+		.replace(CODE_BLOCK, ' ')
+		.replace(IMAGE, ' ')
+		.replace(LINK_KEEPING_ITS_TEXT, '$1')
+		.replace(HTML_TAG, ' ');
 	const words = text.split(/\s+/).filter((w) => /\w/.test(w)).length;
-	return Math.max(1, Math.round(words / 230));
+	return Math.max(1, Math.round(words / WORDS_PER_MINUTE));
 }
