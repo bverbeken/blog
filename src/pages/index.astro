@@ -32,10 +32,6 @@ const posts = await getPosts();
 				font-variant-numeric: tabular-nums;
 				text-align: right;
 			}
-			li :global(.written-by) {
-				margin-left: 0.75em;
-				font-size: 0.75em;
-			}
 			.draft {
 				color: var(--muted);
 				font-size: 0.8em;
@@ -67,11 +63,9 @@ const posts = await getPosts();
 						{posts.map((post) => (
 							<li>
 								<FormattedDate date={post.data.pubDate} />
-								<span>
-									<a href={`/blog/${post.id}/`}>{post.data.title}</a>
-									<WrittenBy by={post.data.writtenBy} />
-									{post.data.draft && <span class="draft">draft</span>}
-								</span>
+								<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+								<WrittenBy by={post.data.writtenBy} />
+								{post.data.draft && <span class="draft">draft</span>}
 							</li>
 						))}
 					</ul>

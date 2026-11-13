@@ -105,7 +105,7 @@ const { title, description, pubDate, updatedDate, heroImage, writtenBy, readingM
 					}
 				</p>
 				<p class="label">
-					<WrittenBy by={writtenBy} withIcon />
+					<WrittenBy by={writtenBy} label />
 					{Astro.url.pathname !== '/blog/writing-with-ai/' && <a class="info" href="/blog/writing-with-ai/" title="What this means" aria-label="What this means">ⓘ</a>}
 				</p>
 				{heroImage && <Image class="hero" width={1280} src={heroImage} alt="" />}
