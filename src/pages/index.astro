@@ -32,6 +32,12 @@ const posts = await getPosts();
 				font-variant-numeric: tabular-nums;
 				text-align: right;
 			}
+			li :global(.written-by) {
+				margin-left: 0.4em;
+			}
+			li:hover :global(.written-by) {
+				color: var(--accent);
+			}
 			.draft {
 				color: var(--muted);
 				font-size: 0.8em;
@@ -63,9 +69,11 @@ const posts = await getPosts();
 						{posts.map((post) => (
 							<li>
 								<FormattedDate date={post.data.pubDate} />
-								<a href={`/blog/${post.id}/`}>{post.data.title}</a>
-								<WrittenBy by={post.data.writtenBy} />
-								{post.data.draft && <span class="draft">draft</span>}
+								<span>
+									<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+									<WrittenBy by={post.data.writtenBy} />
+									{post.data.draft && <span class="draft">draft</span>}
+								</span>
 							</li>
 						))}
 					</ul>
