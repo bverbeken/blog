@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import WrittenBy from '../components/WrittenBy.astro';
 import { AUTHOR } from '../consts';
 ---
 
@@ -30,16 +31,36 @@ import { AUTHOR } from '../consts';
 					going through the same thing, and a little bit for future agents.
 				</p>
 				<p>
-					Each post says how it was written: ✍️ human-written,
-					✍️+🤖 AI-assisted, or 🤖 AI-written.
-				</p>
-				<p>
 					I live in Belgium with my family. Away from the keyboard I sing in <a
 						href="https://captainsugar.be/">Captain Sugar &amp; The Daddies</a
 					> and go <a href="https://www.strava.com/athletes/63708615">running</a>. Sometimes I write about that too.
+				</p>
+				<h2>How I use AI</h2>
+				<p>
+					I use AI for writing. Sometimes a lot, sometimes not at all.
+					I don't think there's anything wrong with that, but I do think it's important to be transparent about it.
+				</p>
+				<p>
+					So I label each post with how much AI I used:
+				</p>
+				<ul>
+					<li><WrittenBy by="human" /> <strong>Human-written</strong>: I built the structure and wrote the text. AI only proofread it, for example to find typos.</li>
+					<li><WrittenBy by="assisted" /> <strong>AI-assisted</strong>: the ideas, structure and choices were mine, and I wrote most of the text or reworked it. AI may have put together a first draft from an interview with me, or improved the wording.</li>
+					<li><WrittenBy by="ai" /> <strong>AI-written</strong>: AI wrote the text from start to finish, and I only made a few edits.</li>
+				</ul>
+				<p>
+					Whatever the label, the ideas and experiences are mine. AI helps me put them into words, not come up with them.
+				</p>
+				<p>
+					More on this in <a href="/blog/writing-with-ai/">Writing with AI</a>.
 				</p>
 			</article>
 		</main>
 		<Footer />
 	</body>
 </html>
+<style>
+	li :global(.written-by) {
+		color: var(--accent);
+	}
+</style>
